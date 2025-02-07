@@ -2,10 +2,11 @@
 <html>
   <head>
     <title>Calculator</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <h2 id="display">0</h2>
+    <div id="calculationDisplay"></div>
+    <div id="currentNumberDisplay">0</div>
     <table>
       <tr>
         <td id="7" class="button number">7</td>
@@ -18,18 +19,22 @@
         <td id="5" class="button number">5</td>
         <td id="6" class="button number">6</td>
         <td id="minus" class="button operation">-</td>
-      </tr><tr>
+      </tr>
+      <tr>
         <td id="1" class="button number">1</td>
         <td id="2" class="button number">2</td>
         <td id="3" class="button number">3</td>
         <td id="multiply" class="button operation">x</td>
-      </tr><tr>
+      </tr>
+      <tr>
         <td id="clear" class="button">C</td>
         <td id="0" class="button number">0</td>
         <td id="decimal" class="button number">.</td>
         <td id="divide" class="button operation">&#247;</td>
       </tr>
-      <tr><td id="equals" class="button">=</td></tr>
+      <tr>
+        <td id="equals" class="button">=</td>
+      </tr>
     </table>
     <script src="calculator.js" type="module"></script>
   </body>

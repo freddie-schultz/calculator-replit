@@ -3,8 +3,18 @@
   height: 60px;
   border: 1px solid black;
 }
-.display {
-  width: 240px;
-  height: 60px;
+
+#calculationDisplay {
+  width: 262px;
+  height: 30px;
   border: 1px solid black;
+  margin: 10px 0 10px 0;
+}
+
+#currentNumberDisplay {
+  margin: 10px 0 10px 0;
+  width: 262px;
+  height: 30px;
+  border: 1px solid black;
+  text-align: right;
 }
