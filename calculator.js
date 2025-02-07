@@ -31,17 +31,16 @@ function typeNumberCharacter(event){
 console.log(character)
 }
 
+
 function typeOperation(event){
   let operation = event.target.id
-  if (currentNumber == 0){
-  
   let previousNumber = {}
 
   previousNumber.number = currentNumber
   previousNumber.operation = currentOperation
 
   calculation.push(previousNumber)
-
+  
   currentOperation = operation
   currentNumber = 0 
 console.log(operation)
