@@ -3,8 +3,18 @@ let currentNumber = 0
 let calculation = []
 let currentOperation = '+'
 
+let numberButtonArray = Array.from(document.querySelectorAll('.number'))
+let operationButtonArray = Array.from(document.querySelectorAll('.operation'))
 
-function typeNumberCharacter(character){
+for(let i in numberButtonArray) {
+  numberButtonArray[i].addEventlistener('click', typeNumberCharacter)
+}
+for(let i in operationButtonArray) {
+  operationButtonArray[i].addEventlistener('click', typeOperation)
+}
+
+function typeNumberCharacter(event){
+  let character = event.target.id
   if (currentNumber == 0){
     currentNumber = character
     return
@@ -17,9 +27,14 @@ function typeNumberCharacter(character){
   currentNumber = currentNumber.toString() + character
 
   updateDisplay()
+  
+console.log(character)
 }
 
-function typeOperation(operation){
+function typeOperation(event){
+  let operation = event.target.id
+  if (currentNumber == 0){
+  
   let previousNumber = {}
 
   previousNumber.number = currentNumber
@@ -29,7 +44,7 @@ function typeOperation(operation){
 
   currentOperation = operation
   currentNumber = 0 
-
+console.log(operation)
   updateDisplay()
 }
 
