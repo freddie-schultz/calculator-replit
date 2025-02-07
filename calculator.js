@@ -7,10 +7,10 @@ let numberButtonArray = Array.from(document.querySelectorAll('.number'))
 let operationButtonArray = Array.from(document.querySelectorAll('.operation'))
 
 for(let i in numberButtonArray) {
-  numberButtonArray[i].addEventlistener('click', typeNumberCharacter)
+  numberButtonArray[i].addEventListener('click', typeNumberCharacter)
 }
 for(let i in operationButtonArray) {
-  operationButtonArray[i].addEventlistener('click', typeOperation)
+  operationButtonArray[i].addEventListener('click', typeOperation)
 }
 
 function typeNumberCharacter(event){
@@ -64,7 +64,7 @@ let displayText = ''
     }
   }
 
-  displayText += '\n\ncurrentNumber'
+  displayText += '\n\n' + currentNumber
   
   document.querySelector("#display").textContent = displayText
 }
