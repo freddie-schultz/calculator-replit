@@ -92,13 +92,18 @@ function pushCurrentNumberToCalculationArray() {
 
   currentNumberString = '0'
 }
-
+// Fix this <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 function updateCurrentNumberDisplay() {
-  // console.log('updating number display with: ' + currentNumberString)
+  console.log('updating number display with: ' + currentNumberString)
 
   // let number = Number(currentNumberString).toString()
   // if (currentNumberString.includes('.')) {
   //   number = number.concat('.')
+  // }
+
+  // if (currentNumberString == '' || currentNumberString == '0') {
+  //   document.querySelector('#currentNumberDisplay').textContent = '0'
+  //   return
   // }
 
   let charArray = currentNumberString.split('')
@@ -110,6 +115,12 @@ function updateCurrentNumberDisplay() {
     }
   }
 
+  if (charArray.length == 0) {
+    document.querySelector('#currentNumberDisplay').textContent = '0'
+    console.log('length 0')
+    return
+  }
+  console.log(charArray)
   document.querySelector('#currentNumberDisplay').textContent =
     charArray.join('')
 }
